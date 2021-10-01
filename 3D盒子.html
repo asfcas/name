@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D旋转盒子</title>
+    <style>
+        @keyframes run {
+            from{
+                transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateY(360deg) rotateZ(0deg);
+            }
+        }
+        .box{
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            top: 50%;
+            left: 50%;
+            margin-left: -300px;
+            margin-top: -300px;
+            transform-style: preserve-3d;
+            animation: run linear infinite 6s;
+        }
+        .box .a,.box .b{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            margin-left: -100px;
+            margin-top: -100px;
+        }
+        .box .a1{
+            transform: translateZ(100px);
+            background-color: red;
+        }
+        .box .a2{
+            transform: rotateY(270deg) translateZ(100px);
+            background-color: blue;
+        }
+        .box .a3{
+            transform: rotateY(180deg) translateZ(100px);
+            background-color: yellow;
+        }
+        .box .a4{
+            transform: rotateY(90deg) translateZ(100px);
+            background-color: green;
+        }
+        .box .a5{
+            transform: rotateX(-90deg) translateZ(100px);
+            background-color: aqua;
+        }
+        .box .a6{
+            transform: rotateX(90deg) translateZ(100px);
+            background-color: black;
+        }
+        .box .b{
+            width: 400px;
+            height: 400px;
+            margin-left: -200px;
+            margin-top: -200px;
+            background-color: rgba(0, 0, 0, 0.1);
+            transition: 3s;
+        }
+        .box .b1{
+            transform: translateZ(200px);
+        }
+        .box .b2{
+            transform: rotateY(270deg) translateZ(200px);
+        }
+        .box .b3{
+            transform: rotateY(180deg) translateZ(200px);
+        }
+        .box .b4{
+            transform: rotateY(90deg) translateZ(200px);
+        }
+        .box .b5{
+            transform: rotateX(-90deg) translateZ(200px);
+        }
+        .box .b6{
+            transform: rotateX(90deg) translateZ(200px);
+        }
+        .box:hover .b1{
+            transform: translateZ(300px);
+        }
+        .box:hover .b2{
+            transform: rotateY(270deg) translateZ(300px);
+        }
+        .box:hover .b3{
+            transform: rotateY(180deg) translateZ(300px);
+        }
+        .box:hover .b4{
+            transform: rotateY(90deg) translateZ(300px);
+        }
+        .box:hover .b5{
+            transform: rotateX(-90deg) translateZ(300px);
+        }
+        .box:hover .b6{
+            transform: rotateX(90deg) translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="a a1"></div>
+        <div class="a a2"></div>
+        <div class="a a3"></div>
+        <div class="a a4"></div>
+        <div class="a a5"></div>
+        <div class="a a6"></div>
+        <div class="b b1"></div>
+        <div class="b b2"></div>
+        <div class="b b3"></div>
+        <div class="b b4"></div>
+        <div class="b b5"></div>
+        <div class="b b6"></div>
+    </div>
+</html>

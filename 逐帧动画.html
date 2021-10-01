@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>逐帧动画</title>
+    <style>
+        .wrap{
+            display: flex;
+            width: 100%;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .wrap div{
+            margin-top: 20px;
+            border: 1px solid black;
+        }
+        @keyframes box1 {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: -438px;
+            }
+        }
+        .box1{
+            animation: box1 steps(6) infinite 3s;
+            width: calc(438px / 6);
+            height: 119px;
+            background: url(img/hua.jpg);
+        }
+        @keyframes box2 {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: 1080px;
+            }
+        }
+        .box2{
+            animation: box2 steps(6) infinite 1s reverse;
+            width: calc(1080px / 6);
+            height: 293px;
+            background: url(img/walk.jpg);
+        }
+        @keyframes box3 {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: -800px;
+            }
+        }
+        .box3{
+            animation: box3 steps(8) infinite 1s;
+            width: calc(800px / 8);
+            height: 100px;
+            background: url(img/loading.png);
+        }
+        @keyframes box4 {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: 1680px;
+            }
+        }
+        .box4{
+            animation: box4 steps(12) infinite 1s reverse;
+            width: calc(1680px / 12);
+            height: 140px;
+            background: url(img/run.png);
+        }
+        @keyframes box5 {
+            0%{
+                background-position-x: 0;
+            }
+            100%{
+                background-position-x: 1375px;
+            }            
+        }
+        .box5{
+            animation: box5 steps(10) infinite 1s reverse;
+            width: calc(1375px / 10);
+            height: 156px;
+            background: url(img/run2.png);
+        }
+        @keyframes box6 {
+            0%{
+                background-position-y: 0;
+            }
+            100%{
+                background-position-y: -2045px;
+            }
+        }
+        .box6{
+            animation: box6 steps(3) infinite 3s;
+            width: 662px;
+            height: calc(2045px / 3);
+            background: url(img/jd.png);
+            transform: scale(.5);
+            transform-origin: left top;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+        <div class="box4"></div>
+        <div class="box5"></div>
+        <div class="box6"></div>
+    </div>
+</body>
+</html>
